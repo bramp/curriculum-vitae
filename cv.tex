@@ -2,15 +2,15 @@
 
 %A Few Useful Packages
 \usepackage{marvosym}
-\usepackage{fontspec} 					%for loading fonts
-\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\usepackage{fontspec}                     %for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} %other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-%\usepackage[big]{layaureo} 				%better formatting of the A4 page
+%\usepackage[big]{layaureo}                %better formatting of the A4 page
 \usepackage{fullpage}
 % an alternative to Layaureo can be ** \usepackage{fullpage} **
-\usepackage{supertabular} 				%for Grades
-\usepackage{titlesec}					%custom \section
+\usepackage{supertabular}                 %for Grades
+\usepackage{titlesec}                     %custom \section
 
 \usepackage{datenumber}
 
@@ -84,17 +84,20 @@
 
 %--------------------TITLE-------------
 \par{\centering
-		{\Huge Andrew Brampton Ph.D.
-	}\bigskip\par}
+	{\Huge Andrew Brampton Ph.D.}
+
+	{\it Developer - Architect - Researcher - Open source enthusiast}
+\bigskip\par}
 
 %--------------------SECTIONS-----------------------------------
 %Section: Personal Data
 \section{Personal Data}
 
 \begin{tabular}{rl}
-    \textsc{Date of Birth:} & 18 November 1982 (\difftoday{1982}{11}{18}~old) \\
-    \textsc{Address:}   & 560 N Street, SW, Apt N813, Washington, DC, 20024 \\
-    \textsc{Phone:}     & +1 973 602 7267\\
+%    \textsc{Date of Birth:} & 18 November 1982 (\difftoday{1982}{11}{18}~old) \\ %TODO Fix
+    \textsc{Date of Birth:} & 18 November 1982 (29 years old) \\
+%    \textsc{Address:}   & 560 N Street, SW, Apt N813, Washington, DC, 20024 \\
+%    \textsc{Phone:}     & +1 973 602 7267\\
     \textsc{Email:}     & \href{mailto:me@bramp.net}{me@bramp.net}\\
     \textsc{Website:}   & \href{http://bramp.net}{bramp.net} - \href{https://github.com/bramp}{github.com/bramp}\\
 \end{tabular}
@@ -104,28 +107,37 @@
 \begin{tabular}{r|p{13.5cm}}
 
  \textsc{Mar 2012-} & \textbf{Manager, Mobile Marketing Development} at \textsc{SoundBite Communications} \\
- \emph{Current}     & In this role I lead a growing team of developers, system administrators and QA testers. I continue to define
+ \emph{Current}     & I now lead a cross-functional team of developers, system administrators and QA testers. I continue to define
 			the technology and direction for the mobile marketing arm of SoundBite. This includes maintaining our high-volume
-			SMS messaging platforms, developing our mobile web systems, and overseeing the development of smartphone apps.\\
+			SMS messaging platforms, developing our multiple mobile products, and overseeing the development of custom work.\\
 &\\
  \textsc{Jun 2011-} & \textbf{Head of Technology} at \textsc{2ergo Americas} \\
- \textsc{Mar 2012}  & When I first joined 2ergo Americas, they had no technical leadership, and in my role of Systems Administrator
+ \textsc{Mar 2012}  & When I first joined 2ergo Americas, there was no technical leadership, and in my role of DevOps
 			I quickly became the ``go-to guy'' for solving problems. After many months of defining our process, and
-			deciding what technologies we should use, I eased into the role of Head of Technology. My duties included ensuring 
-			2ergo Americans had a unified view, managing our developers and sysadmin staff, and ensuring things kept working.
+			deciding what technologies we should use, I eased into the role of Head of Technology.
+
+                        My duties included ensuring 
+			2ergo Americans had a unified techinical vision, managing our developers and sysadmin staff, and growing the business.
 			In the following 9 months, I planned and led the migration to a virtualised environment, designed a global messaging
-			infrastructure, and headed the technical integration with SoundBite when they acquired 2ergo Americas. \\
+			infrastructure, and headed the technical integration with SoundBite when they acquired 2ergo Americas in March 2012. \\
 &\\
- \textsc{Oct 2010-} & \textbf{Systems Administrator} at \textsc{2ergo Americas} \\
- \textsc{Jun 2011}  %& \emph{DevOps Extraordinaire}
-                    & As the only sysadmin I was responsible for maintaining over 50 servers and keeping our systems running well. 
-			I entered the role of sysadmin with little hand-over, and spent the first few months learning and documenting the numerous systems.
-			Eventually I got a handle and started to stream line and standardise the various platforms. Included in this role was miscellaneous devolpment work,
-			when and as it was needed. \\
+ \textsc{Oct 2010-} & \textbf{DevOps} at \textsc{2ergo Americas} \\
+ \textsc{Jun 2011}  & \emph{Development and operations}\\
+                    & I was responsible for maintaining over 50 servers and keeping everything running optimally. 
+			I entered the role with little hand-over, and spent the first few months learning and documenting the numerous systems.
+			Eventually I got a handle and started to stream line and standardise the various platforms. This also included 
+			development work to improve the performance of the platforms to handle the growth of the business. \\
 &\\
  \textsc{Oct 2007-} & \textbf{Research Associate} at \textsc{Lancaster University} \\
  \textsc{Oct 2010}  & \emph{Networking Researcher}\\
-                    & During the three years at Lancaster I have been involved in numerous projects, some of which involved working in small teams and others working alone. My tasks were typically research orientated (such as running and analysing experiments, and publishing my results), but in addition to this I have helped with teaching undergraduate and master's students. This included running seminars, supervising labs, marking coursework, and lecturing.\\
+                    & During the three years at Lancaster I have been involved in numerous projects, some of which involved working in small teams and
+			others working alone. My tasks were typically research orientated (such as running and analysing experiments, and publishing my 
+			results), but in addition to this I have helped with teaching undergraduate and master's students. This included running seminars,
+			supervising labs, marking coursework, and lecturing.
+
+			During this time, I worked on large scale distributed systems, content distribution networks, and low level optimasations of the Linux
+			network stack.
+			\\
 
 %\multicolumn{2}{c}{} \\
 
@@ -147,17 +159,21 @@
 & Supervisor: Nicholas Race\\
 &\\
 
-\textsc{2001} & \textbf{A-Levels, Hind-Leys Community College, Leicestershire, UK}\\
-& in Computer Science, Mathematics, Further Mathematics, Physics and General Studies.\\
+%\textsc{2001} & \textbf{A-Levels, Hind-Leys Community College, Leicestershire, UK}\\
+%& in Computer Science, Mathematics, Further Mathematics, Physics and General Studies.\\
 
 \end{tabular}
+
+\section{Work Projects}
+ 
 
 % Used to force the order of the citations
 \nocite{jakeman2009fna,faulkner2009epn,macquire2008acf,brampton2008cew,macquire2008asd,brampton2007cui,rai2007pmp,brampton2006sdh,macquire2006asd,macquire2006pas,brampton2005sdh}
 
 \section{Research Projects}
  \textbf{Stealth Distributed Hash Table}\\
- Designed, implemented and evaluated a new type of distributed hash table (DHT), a form of peer-to-peer network, which was designed to be more reliable than existing DHTs, and suitable for high performance applications.
+ Designed, implemented and evaluated a new type of distributed hash table (DHT), a form of peer-to-peer network, which was designed to be more reliable than 
+existing DHTs, and suitable for high performance applications.
 
  \begin{itemize}
   \item Created a Java based peer-to-peer network simulator, which could accurately model underlying network properties.
@@ -198,9 +214,16 @@ To aid my research into interactive video-on-demand I required realistic workloa
 \begin{tabular}{r|p{12cm}}
 
 \multicolumn{2}{l}{\textbf{Programming}} \\
-Advanced & C++, C, Java, PHP and \LaTeX \\
-Casual   & Bash, Python, Pascal, Lua, C\# and .Net, ASP, x86 ASM, and other miscellaneous languages \\
-Notes    & Experienced developer, with strong OO knowledge. Skills range from kernel hacking to application development, from web development to scripting. Has designed and implemented large scale distributed systems and robust applications that require a high availability\\
+Advanced      & Java, C, PHP and JavaScript \\
+Casual        & C++, Bash, Python, Pascal, Lua, C\# and .Net, ASP, x86 ASM, and other miscellaneous languages \\
+Frameworks    & Spring IOC/MVN, hibernate, JBoss/Tomcats, JMS (ActiveMQ/JBossMQ) \\
+Just for fun  & \LaTeX, Node.js, Redis, MongoDB and Amazon AWS \\
+Notes         & Experienced developer, with strong OO knowledge. Skills range from kernel hacking to application
+                development, from web development to scripting. Has designed and implemented large scale distributed
+                systems and robust applications that require a high availability.\\
+
+%Java: Spring IOC/MVC, Hibenerate, JBoss/Tomcat,
+%NodeJS, MongoDB, Amazon AWS
 
 \multicolumn{2}{l}{} \\
 \multicolumn{2}{l}{\textbf{Platforms}} \\
@@ -225,9 +248,23 @@ Good & Matlab, Maple, R, gnuplot\\
 \end{tabular}
 
 
-\textbf{Open Source}\\
- In my free time I have contributed to numerous Open Source projects, and have even started a few myself. To name just a few I have had patches accepted by Linux, FreeBSD, PHP, Google Chrome, Google Android, Intel's Networking Drivers, HeidiSQL, and many more. In addition to this I have open sourced and made available numerous projects ranging from academic network simulation and benchmarking to an application to mount Nintendo DS roms\footnote{\href{http://bramp.net/blog/ndsfs-a-fuse-application-to-mount-nintendo-ds-roms}{http://bramp.net/blog/ndsfs-a-fuse-application-to-mount-nintendo-ds-roms}}, to scripts for converting ordnance survey coordinates to GPS coordinates\footnote{\href{http://bramp.net/blog/os-easting-northing-to-lat-long}{http://bramp.net/blog/os-easting-northing-to-lat-long}}.
+\section{Open Source}
+%\textbf{Open Source}\\
+ In my free time I have contributed to numerous open source projects, and have even started a few myself. To name just a few I have had patches accepted by 
+The Linux Kernel, The FreeBSD Project, PHP, Google Chrome, Google Android, Intel's Networking Drivers, HeidiSQL, and many more. In addition to this I have open sourced and made 
+available numerous projects ranging from academic network simulation and benchmarking\footnote{\href{https://github.com/bramp/threadnetperf}{https://github.com/bramp/threadnetperf}} to an application that reads Nintendo DS 
+roms\footnote{\href{http://bramp.net/blog/ndsfs-a-fuse-application-to-mount-nintendo-ds-roms}{http://bramp.net/blog/ndsfs-a-fuse-application-to-mount-nintendo-ds-roms}}, 
+to scripts for converting ordnance survey coordinates to GPS 
+coordinates\footnote{\href{http://bramp.net/blog/os-easting-northing-to-lat-long}{http://bramp.net/blog/os-easting-northing-to-lat-long}}.
 
+\section{References}
+“It must be something to be the smartest person in the room in most rooms! Andrew is a brilliant developer and systems guru, and he's been 
+an invaluable asset to our organization. He'll always tell it how it is, give 110%, and take full pride in any work he produces. He challenges the rest of the 
+team to do the same, and he's the first to make extra time in an already full schedule to help is peers by sharing his limitless technical knowledge. I count on 
+Andrew not only to move our business in a favorable technical direction, but also to help me exercise that developer part of my own brain on occasion. I 
+thoroughly enjoy working with him and appreciate his contributions to the team.” {\it March 2012 - Michael Scully, GM and Managing Director, 2ergo Americas, Inc}
+
+{\it \href{http://www.linkedin.com/in/bramp}{Read more at Linkedin}}
 
 %\section{Publications}
 
