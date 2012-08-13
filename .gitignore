@@ -29,3 +29,6 @@
 *.toc
 *.vrb
 *.xdy
+*.d
+*.make
+*.kilepr
