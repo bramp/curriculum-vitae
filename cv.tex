@@ -1,4 +1,14 @@
-\documentclass[a4paper,10pt]{article}
+%%% Notes %%%
+% Make the work experience section shorter with bullets
+% Add what I'm looking for at the top
+% Reorganise the skills section
+
+%\documentclass[a4paper,10pt]{article}
+\documentclass[letterpaper,10pt]{article}
+\usepackage[margin=0.9in]{geometry}
+
+\usepackage{tgpagella}
+\usepackage[T1]{fontenc}
 
 %A Few Useful Packages
 \usepackage{marvosym}
@@ -7,10 +17,11 @@
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
 %\usepackage[big]{layaureo}                %better formatting of the A4 page
-\usepackage{fullpage}
+%\usepackage{fullpage}
 % an alternative to Layaureo can be ** \usepackage{fullpage} **
 \usepackage{supertabular}                 %for Grades
 \usepackage{titlesec}                     %custom \section
+\usepackage{tabularx}
 
 \usepackage{datenumber}
 
@@ -87,24 +98,90 @@
 	{\Huge Andrew Brampton Ph.D.}
 
 	{\it Developer - Architect - Researcher - Open source enthusiast}
-\bigskip\par}
+
+	\href{mailto:me@bramp.net}{me@bramp.net} - \href{http://bramp.net}{www.bramp.net} - \href{https://github.com/bramp}{github.com/bramp}
+\par}
+
+I'm looking for a position where I can make an impact, design the architecture and shape the technical direction. I'm looking for a challenge, where an existing
+application needs to scale, or a new application needs to be built from the ground up. I am passionate about technology, an analytical problem solver, and enjoy
+working on complex distributed systems. I'm hoping to use my knowledge and experience to lead a team, and grow the company.
 
 %--------------------SECTIONS-----------------------------------
 %Section: Personal Data
-\section{Personal Data}
+%\section{Personal Data}
 
-\begin{tabular}{rl}
-%    \textsc{Date of Birth:} & 18 November 1982 (\difftoday{1982}{11}{18}~old) \\ %TODO Fix
-    \textsc{Date of Birth:} & 18 November 1982 (29 years old) \\
-%    \textsc{Address:}   & 560 N Street, SW, Apt N813, Washington, DC, 20024 \\
-%    \textsc{Phone:}     & +1 973 602 7267\\
-    \textsc{Email:}     & \href{mailto:me@bramp.net}{me@bramp.net}\\
-    \textsc{Website:}   & \href{http://bramp.net}{bramp.net} - \href{https://github.com/bramp}{github.com/bramp}\\
-\end{tabular}
+%\begin{tabular}{rl}
+%%    \textsc{Date of Birth:} & 18 November 1982 (\difftoday{1982}{11}{18}~old) \\ %TODO Fix
+%    \textsc{Date of Birth:} & 18 November 1982 (29 years old) \\
+%%    \textsc{Address:}   & 560 N Street, SW, Apt N813, Washington, DC, 20024 \\
+%%    \textsc{Phone:}     & +1 973 602 7267\\
+%    \textsc{Email:}     & \href{mailto:me@bramp.net}{me@bramp.net}\\
+%    \textsc{Website:}   & \href{http://bramp.net}{bramp.net} - \href{https://github.com/bramp}{github.com/bramp}\\
+%\end{tabular}
+
+
+\section{Skills}
+\begin{tabularx}{\textwidth}{r|X}
+
+\multicolumn{2}{l}{\textbf{Programming}} \\
+Advanced      & Java, C, PHP and JavaScript \\
+Casual        & C++, Bash, Python, Pascal, Lua, C\# and .Net, ASP, x86 ASM, and other miscellaneous languages \\
+Frameworks    & Spring IoC/MVC, Hibernate, JBoss/Tomcats, JMS (ActiveMQ/JBossMQ) and Android \\
+\\
+Notes         & Experienced developer, with strong Object-oriented knowledge. Skills range from kernel hacking to Android
+                development, from web development to database optimisation. Has designed and implemented large scale distributed
+                systems and robust applications that require a high availability.\\
+
+%Java: Spring IOC/MVC, Hibenerate, JBoss/Tomcat,
+%NodeJS, MongoDB, Amazon AWS
+
+\multicolumn{2}{l}{} \\
+\multicolumn{2}{l}{\textbf{Web Technologies}} \\
+Advanced & HTML5, CSS3, Mobile development, JavaScript, PHP, CGI, AJAX \\
+         & Frameworks: jQuery, Kohana, Yii and Zend Framework.\\
+
+
+\multicolumn{2}{l}{} \\
+\multicolumn{2}{l}{\textbf{Platforms}} \\
+Advanced       & Linux (distro of choice Debian) and FreeBSD 4 and above\\
+Above Average  & Configuring and running Apache+PHP, MySQL, OpenLDAP, and other services\\
+\\
+Notes          & For the last 5 years I've almost exclusively used Linux PCs at work and home.\\
+
+
+\multicolumn{2}{l}{} \\
+\multicolumn{2}{l}{\textbf{Just for fun}} \\
+Languages      & \LaTeX, CoffeeScript, Groovy/Grails, Clojure \\
+Software       & Node.js, nginx, Redis and MongoDB \\
+Platform       & Amazon AWS (EC2/S3/EBS), Google App Engine
+
+
+%\multicolumn{2}{l}{} \\
+%\multicolumn{2}{l}{\textbf{Simulations}} \\
+%Advanced & Designing and implementing a network simulator\\
+%Good     & Using PlanetLab (a planetary scale test bed)\\
+%Casual   & Running NS-2, OMNeT++ and other simulators\\
+
+%\multicolumn{2}{l}{} \\
+%\multicolumn{2}{l}{\textbf{Mathematical}} \\
+%Good & Matlab, Maple, R, gnuplot\\
+
+\end{tabularx}
+
+
+\section{Open Source}
+%\textbf{Open Source}\\
+ In my free time I have contributed to numerous open source projects, and have even started a few myself. To name just a few I have had patches accepted by 
+The Linux Kernel, The FreeBSD Project, PHP, Google Chrome, Google Android, Intel's Networking Drivers, HeidiSQL, and many more. In addition to this I have open sourced and made 
+available numerous projects ranging from academic network simulation and benchmarking\footnote{\href{https://github.com/bramp/threadnetperf}{https://github.com/bramp/threadnetperf}} to an application that reads Nintendo DS 
+roms\footnote{\href{http://bramp.net/blog/ndsfs-a-fuse-application-to-mount-nintendo-ds-roms}{http://bramp.net/blog/ndsfs-a-fuse-application-to-mount-nintendo-ds-roms}}, 
+to scripts for converting ordnance survey coordinates to GPS 
+coordinates\footnote{\href{http://bramp.net/blog/os-easting-northing-to-lat-long}{http://bramp.net/blog/os-easting-northing-to-lat-long}}.
+
 
 %Section: Work Experience at the top
 \section{Work History}
-\begin{tabular}{r|p{13.5cm}}
+\begin{tabularx}{\textwidth}{r|X}
 
  \textsc{Mar 2012-} & \textbf{Manager, Mobile Marketing Development} at \textsc{SoundBite Communications} \\
  \emph{Current}     & I now lead a cross-functional team of developers, system administrators and QA testers. I continue to define
@@ -117,7 +194,7 @@
 			deciding what technologies we should use, I eased into the role of Head of Technology.
 
                         My duties included ensuring 
-			2ergo Americans had a unified techinical vision, managing our developers and sysadmin staff, and growing the business.
+			2ergo Americans had a unified technical vision, managing our developers and sysadmin staff, and growing the business.
 			In the following 9 months, I planned and led the migration to a virtualised environment, designed a global messaging
 			infrastructure, and headed the technical integration with SoundBite when they acquired 2ergo Americas in March 2012. \\
 &\\
@@ -135,17 +212,17 @@
 			results), but in addition to this I have helped with teaching undergraduate and master's students. This included running seminars,
 			supervising labs, marking coursework, and lecturing.
 
-			During this time, I worked on large scale distributed systems, content distribution networks, and low level optimasations of the Linux
+			During this time, I worked on large scale distributed systems, content distribution networks, and low level optimisations of the Linux
 			network stack.
 			\\
 
 %\multicolumn{2}{c}{} \\
 
-\end{tabular}
+\end{tabularx}
 
 %Section: Education
 \section{Education}
-\begin{tabular}{rp{14cm}}	
+\begin{tabularx}{\textwidth}{rX}	
  \textsc{2008} & \textbf{Ph.D. in Computer Science, Lancaster University, UK}\\
 & Thesis: ``The Impact of Highly Interactive Workloads on Video-on-Demand Systems''\\
 & Supervisor: Prof. Laurent Mathy\\
@@ -162,10 +239,50 @@
 %\textsc{2001} & \textbf{A-Levels, Hind-Leys Community College, Leicestershire, UK}\\
 %& in Computer Science, Mathematics, Further Mathematics, Physics and General Studies.\\
 
-\end{tabular}
+\end{tabularx}
+\clearpage
+\section{Projects}
 
-\section{Work Projects}
- 
+\textbf{Android Apps}\\
+% Hacking the Linux kernel
+In my free time I have created a number of Android apps, Nando's finder, Scorer: The Score Keeper, and the most popular MusicGrid.
+The later had over half a million installs in the first 6 months, has been reviewed on a BBC technology TV show, and continues
+to stay popular. All apps have an average rating of 4.5 out of 5 or higher, which shows my commitment to shipping quality, well thought out apps.
+
+All apps are available for free on Google Play.
+
+\vspace{1em}
+
+\textbf{Scaling a web-application}\\
+2ergo hosts the mobile website for a large news organisation. When a big story breaks the site would experience an order of magnitude more traffic than normal.
+Because of this I was faced with improving an application that would normally only handle 70 page views per second, to handle 800 page views per second.
+By taking an holistic approach and measuring various parts of the system I made the following main improvement:
+
+ \begin{itemize}
+  \item Made the static content easier to be cached by the web browser, to reduce unnecessary load.
+  \item Reconfigured the front-end Apache servers to handle higher number of concurrent connections, and reduced the timeouts. 
+  \item Horizontally scaled the back-end (MySQL) database to have multiple redundant read-only copies of the data to reduce load on the master.
+ \end{itemize}
+\vspace{1em}
+
+
+\textbf{Global Messaging Platform}\\
+In 2011, 2ergo Americas delivered over half a billion SMS (text) messages to mobile devices in North and South America. To achieve this we have an internally
+built messaging platform. This platform is a JBoss clustered application using JMS between the various components. 2ergo group (the International part
+of the business), had deployed multiple different messaging platforms across Europe/Australia/Asia. I advocated for a standard messaging platform to
+be used by the company across all regions. Over the following 6 months I laid the ground work for the US platform to be rolled out and configured global. 
+At the end of the project, 2ergo's global reach was now unified, which allowed for:
+ \begin{itemize}
+  \item Better global IT support, with each region being able to support the global platform.
+  \item Simpler integration, as it was now possible for any region to send SMS messages into any other region.
+  \item Standardisation, allowing the development teams in each region to contribute changes to the single core messaging platform.
+ \end{itemize}
+\vspace{1em}
+
+
+% Android apps
+% Global Portico
+% Scaling FoxNews - Better caching, ability to degrade features, more effecient load balancers
 
 % Used to force the order of the citations
 \nocite{jakeman2009fna,faulkner2009epn,macquire2008acf,brampton2008cew,macquire2008asd,brampton2007cui,rai2007pmp,brampton2006sdh,macquire2006asd,macquire2006pas,brampton2005sdh}
@@ -184,19 +301,25 @@ existing DHTs, and suitable for high performance applications.
 \vspace{1em}
 
 \textbf{Interactive Video-on-Demand}\\
-To aid my research into interactive video-on-demand I required realistic workloads of users heavily seeking through a video. To this end I captured and served the 2006 FIFA World Cup (soccer), and recorded how users consumed the content.
+To aid my research into interactive video-on-demand I required realistic workloads of users heavily seeking through a video. 
+To this end I captured and served the 2006 FIFA World Cup (soccer), and recorded how users consumed the content.
 
 \begin{itemize}
- \item Created and maintained a Video-on-Demand (VoD) system using PHP and Flash video, including the development of tools and scripts to capture video, encode, and upload to the system.
+ \item Created and maintained a Video-on-Demand (VoD) system using PHP and Flash video, including the development of tools and 
+       scripts to capture video, encode, and upload to the system.
  \item Created statistical models based on recorded user behaviour.
  \item Created and developed algorithms to improve prefetching and caching for interactive VoD.
- \item This work was published at conferences~\cite{brampton2007cui,macquire2008acf}, in a journal~\cite{brampton2008cew}, and finally became the foundation of my Ph.D. thesis. In addition, all source code and recorded traces were released\footnote{\href{http://bramp.net/blog/flvtool-a-command-line-flash-video-file-flv-editor}{http://bramp.net/blog/flvtool-a-command-line-flash-video-file-flv-editor} and \href{http://www.rcdn.org/}{http://www.rcdn.org/}}.
+ \item This work was published at conferences~\cite{brampton2007cui,macquire2008acf}, in a journal~\cite{brampton2008cew}, and 
+       finally became the foundation of my Ph.D. thesis. In addition, all source code and recorded traces were 
+       released\footnote{\href{http://bramp.net/blog/flvtool-a-command-line-flash-video-file-flv-editor}{http://bramp.net/blog/flvtool-a-command-line-flash-video-file-flv-editor}
+       and \href{http://www.rcdn.org/}{http://www.rcdn.org/}}.
 \end{itemize}
 \vspace{1em}
 
 \textbf{10Gbit+ Networking on Multi-core platforms}\\
 % Hacking the Linux kernel
- At the beginning of my postdoctoral research, I helped on a project which aimed to identify and remove bottlenecks associated with high speed networking on multi-processor or multi-core machines.
+ At the beginning of my postdoctoral research, I helped on a project which aimed to identify and remove bottlenecks associated
+ with high speed networking on multi-processor or multi-core machines.
 
 \begin{itemize}
  \item Instrumented the Linux network stack, and used tools such as OProfile.
@@ -207,64 +330,22 @@ To aid my research into interactive video-on-demand I required realistic workloa
 
 \textbf{High Performance Routing on Commodity Hardware}\\
 % Hacking the FreeBSD kernel
- Over the last two years, in my free time, I've been involved in a technology start-up whose aim is to create a high performance networking platform running on low-cost commodity hardware. I have been the chief architect and developer creating a flexible system able to sustain high packet throughputs. This work is based on a custom network engine written as a FreeBSD kernel module. Over the two years I have had extensive experience developing for the FreeBSD 7 and 8 kernels, and have managed to achieve almost linear scaling of packet forwarding with the number of cores, up to a tested rate of 40Mpps (packets per second) with throughputs easily exceeding 20Gbps. This networking platform has not yet been publicly announced, and it is our hope to get funding in the near future.
+ Over the last two years, in my free time, I've been involved in a technology start-up whose aim is to create a high performance
+ networking platform running on low-cost commodity hardware. I have been the chief architect and developer creating a flexible
+ system able to sustain high packet throughputs. This work is based on a custom network engine written as a FreeBSD kernel module.
+ Over the two years I have had extensive experience developing for the FreeBSD 7 and 8 kernels, and have managed to achieve almost
+ linear scaling of packet forwarding with the number of cores, up to a tested rate of 40Mpps (packets per second) with throughputs
+ easily exceeding 20Gbps. This networking platform has not yet been publicly announced, and it is our hope to get funding in the near future.
 \vspace{1em}
 
-\section{Computer Skills}
-\begin{tabular}{r|p{12cm}}
-
-\multicolumn{2}{l}{\textbf{Programming}} \\
-Advanced      & Java, C, PHP and JavaScript \\
-Casual        & C++, Bash, Python, Pascal, Lua, C\# and .Net, ASP, x86 ASM, and other miscellaneous languages \\
-Frameworks    & Spring IOC/MVN, hibernate, JBoss/Tomcats, JMS (ActiveMQ/JBossMQ) \\
-Just for fun  & \LaTeX, Node.js, Redis, MongoDB and Amazon AWS \\
-Notes         & Experienced developer, with strong OO knowledge. Skills range from kernel hacking to application
-                development, from web development to scripting. Has designed and implemented large scale distributed
-                systems and robust applications that require a high availability.\\
-
-%Java: Spring IOC/MVC, Hibenerate, JBoss/Tomcat,
-%NodeJS, MongoDB, Amazon AWS
-
-\multicolumn{2}{l}{} \\
-\multicolumn{2}{l}{\textbf{Platforms}} \\
-Advanced       & Windows XP, Windows Vista, Windows Servers\\
-               & Linux (specifically Debian) and FreeBSD 4 and above\\
-Above Average  & Configuring and running Apache+PHP, MySQL, OpenLDAP, PostgresSQL, and other services\\
-
-\multicolumn{2}{l}{} \\
-\multicolumn{2}{l}{\textbf{Simulations}} \\
-Advanced & Designing and implementing a network simulator\\
-Good     & Using PlanetLab (a planetary scale test bed)\\
-Casual   & Running NS-2, OMNeT++ and other simulators\\
-
-\multicolumn{2}{l}{} \\
-\multicolumn{2}{l}{\textbf{Web Technologies}} \\
-Advanced & HTML, CSS, JavaScript, PHP, CGI, AJAX, and numerous frameworks such as JQuery, Kohana and Zend Framework.\\
-
-\multicolumn{2}{l}{} \\
-\multicolumn{2}{l}{\textbf{Mathematical}} \\
-Good & Matlab, Maple, R, gnuplot\\
-
-\end{tabular}
-
-
-\section{Open Source}
-%\textbf{Open Source}\\
- In my free time I have contributed to numerous open source projects, and have even started a few myself. To name just a few I have had patches accepted by 
-The Linux Kernel, The FreeBSD Project, PHP, Google Chrome, Google Android, Intel's Networking Drivers, HeidiSQL, and many more. In addition to this I have open sourced and made 
-available numerous projects ranging from academic network simulation and benchmarking\footnote{\href{https://github.com/bramp/threadnetperf}{https://github.com/bramp/threadnetperf}} to an application that reads Nintendo DS 
-roms\footnote{\href{http://bramp.net/blog/ndsfs-a-fuse-application-to-mount-nintendo-ds-roms}{http://bramp.net/blog/ndsfs-a-fuse-application-to-mount-nintendo-ds-roms}}, 
-to scripts for converting ordnance survey coordinates to GPS 
-coordinates\footnote{\href{http://bramp.net/blog/os-easting-northing-to-lat-long}{http://bramp.net/blog/os-easting-northing-to-lat-long}}.
-
 \section{References}
-“It must be something to be the smartest person in the room in most rooms! Andrew is a brilliant developer and systems guru, and he's been 
-an invaluable asset to our organization. He'll always tell it how it is, give 110%, and take full pride in any work he produces. He challenges the rest of the 
+``{\it It must be something to be the smartest person in the room in most rooms! Andrew is a brilliant developer and systems guru, and he's been 
+an invaluable asset to our organization. He'll always tell it how it is, give 110\%, and take full pride in any work he produces. He challenges the rest of the 
 team to do the same, and he's the first to make extra time in an already full schedule to help is peers by sharing his limitless technical knowledge. I count on 
 Andrew not only to move our business in a favorable technical direction, but also to help me exercise that developer part of my own brain on occasion. I 
-thoroughly enjoy working with him and appreciate his contributions to the team.” {\it March 2012 - Michael Scully, GM and Managing Director, 2ergo Americas, Inc}
+thoroughly enjoy working with him and appreciate his contributions to the team.}'' - March 2012 - Michael Scully, GM and Managing Director, 2ergo Americas, Inc
 
-{\it \href{http://www.linkedin.com/in/bramp}{Read more at Linkedin}}
+\href{http://www.linkedin.com/in/bramp}{Read more at Linkedin}. Contact details available on request.
 
 %\section{Publications}
 
