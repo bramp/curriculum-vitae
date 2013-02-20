@@ -173,10 +173,7 @@ Platform       & Amazon AWS (EC2/S3/EBS), Google App Engine
 %\textbf{Open Source}\\
  In my free time I have contributed to numerous open source projects, and have even started a few myself. To name just a few I have had patches accepted by 
 The Linux Kernel, The FreeBSD Project, PHP, Google Chrome, Google Android, Intel's Networking Drivers, HeidiSQL, and many more. In addition to this I have open sourced and made 
-available numerous projects ranging from academic network simulation and benchmarking\footnote{\href{https://github.com/bramp/threadnetperf}{https://github.com/bramp/threadnetperf}} to an application that reads Nintendo DS 
-roms\footnote{\href{http://bramp.net/blog/ndsfs-a-fuse-application-to-mount-nintendo-ds-roms}{http://bramp.net/blog/ndsfs-a-fuse-application-to-mount-nintendo-ds-roms}}, 
-to scripts for converting ordnance survey coordinates to GPS 
-coordinates\footnote{\href{http://bramp.net/blog/os-easting-northing-to-lat-long}{http://bramp.net/blog/os-easting-northing-to-lat-long}}.
+available numerous projects ranging from small little helper libraries, to larger network simulation and benchmarking tools. Check out my \href{https://github.com/bramp/}{https://github.com/bramp/} for more information.
 
 
 %Section: Work Experience at the top
@@ -187,6 +184,9 @@ coordinates\footnote{\href{http://bramp.net/blog/os-easting-northing-to-lat-long
  \emph{Current}     & I now lead a cross-functional team of developers, system administrators and QA testers. I continue to define
 			the technology and direction for the mobile marketing arm of SoundBite. This includes maintaining our high-volume
 			SMS messaging platforms, developing our multiple mobile products, and overseeing the development of custom work.\\
+
+&\\
+& \it{March 2012 2ergo Americas was aquired by SoundBite Communications} \\
 &\\
  \textsc{Jun 2011-} & \textbf{Head of Technology} at \textsc{2ergo Americas} \\
  \textsc{Mar 2012}  & When I first joined 2ergo Americas, there was no technical leadership, and in my role of DevOps
@@ -246,7 +246,7 @@ coordinates\footnote{\href{http://bramp.net/blog/os-easting-northing-to-lat-long
 \textbf{Android Apps}\\
 % Hacking the Linux kernel
 In my free time I have created a number of Android apps, Nando's finder, Scorer: The Score Keeper, and the most popular MusicGrid.
-The later had over half a million installs in the first 6 months, has been reviewed on a BBC technology TV show, and continues
+The latter had over half a million installs in the first 6 months, has been reviewed on a BBC technology TV show, and continues
 to stay popular. All apps have an average rating of 4.5 out of 5 or higher, which shows my commitment to shipping quality, well thought out apps.
 
 All apps are available for free on Google Play.
@@ -255,13 +255,15 @@ All apps are available for free on Google Play.
 
 \textbf{Scaling a web-application}\\
 2ergo hosts the mobile website for a large news organisation. When a big story breaks the site would experience an order of magnitude more traffic than normal.
-Because of this I was faced with improving an application that would normally only handle 70 page views per second, to handle 800 page views per second.
+Because of this I was faced with improving an application that would normally only handle 70 page views per second, to handle 950 page views per second.
 By taking an holistic approach and measuring various parts of the system I made the following main improvement:
 
  \begin{itemize}
-  \item Made the static content easier to be cached by the web browser, to reduce unnecessary load.
+  \item Made the site easier to be cached by the web browser, to reduce unnecessary load.
   \item Reconfigured the front-end Apache servers to handle higher number of concurrent connections, and reduced the timeouts. 
   \item Horizontally scaled the back-end (MySQL) database to have multiple redundant read-only copies of the data to reduce load on the master.
+  \item Implemented multiple best-practices, such as degrading featurers, and caching solution (in this case ehcache).
+
  \end{itemize}
 \vspace{1em}
 
