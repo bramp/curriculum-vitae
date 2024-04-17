@@ -19,15 +19,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
   <style>
-    @page {
-      size: letter;
-      margin: 0;
-
-      @bottom-left {
-        content: counter(page) ' of ' counter(pages);
-      }
-    }
-
     body {
       /*margin: 30mm 45mm 30mm 45mm; */
 
@@ -62,14 +53,6 @@
 
       background: white;
     }
-
-    @media print {
-      #container {
-        box-sizing: unset;
-        box-shadow: unset;
-      }
-    }
-
 
     #container {
       display: grid;
@@ -214,6 +197,7 @@
       clear: both;
       margin-top: 1.5em;
       margin-bottom: 1.5em;
+      break-inside: avoid;
     }
 
     li i {
@@ -319,6 +303,34 @@
 
       .timelines {
         display: none;
+      }
+    }
+
+
+    @page {
+      size: letter;
+      margin: 0;
+
+      background-color: #525659;
+
+      @bottom-left {
+        content: counter(page) ' of ' counter(pages);
+      }
+    }
+
+    @media print {
+      #container {
+        box-sizing: unset;
+        box-shadow: unset;
+      }
+
+      /* When the document is printed across many pages, 
+         this ensures the padding/margin is respected for items that are
+         broken across a page.
+         See https://stackoverflow.com/a/77946247/88646
+      */
+      .print-fix {
+        padding: 1px;
       }
     }
 
@@ -437,158 +449,185 @@ move in the opposite direction.<br/> - E.F. Schumacher</p>
 
       </div>
 
-      <div class=job id=google>
-        <img src="gcp.png" class=logo>
-        <h3>Uber Tech Lead, Storage SRE </h3>
-        <div class=duration><a href="https://about.google/">Google</a> - August 2020 - August 2023</div>
-        <p>Responsible for all <a href="https://cloud.google.com/products/storage">storage products</a> across Google Cloud, and for internal use cases (Drive, Photos, Gmail, etc).</p>
+      <div class="print-fix">
+        <div class=job id=google>
+          <img src="gcp.png" class=logo>
+          <h3>Uber Tech Lead, Storage SRE </h3>
+          <div class=duration><a href="https://about.google/">Google</a> - August 2020 - August 2023</div>
+          <p>Responsible for all <a href="https://cloud.google.com/products/storage">storage products</a> across Google Cloud, and for internal use cases (Drive, Photos, Gmail, etc).</p>
 
-        <ul>
-            <li>Partnered with engineering, product, and software teams across the orgs to set technical vision, strategy, and roadmaps, to deliver reliability, performance, and resilience at scale.</li>
-            <li>Delivered multiple large-scale engineering projects.</li>
-              <!-- GDPR, Disk Shortage, Regionalisation, New products -->
-              <!-- Alignement on reliabile. Grow tech council. -->
-            <li>Acted as a critical resource across internal or external partner orgs, and are a recognized leader for reliability, scalability, performance, and resilience, with a deep understanding of key business and customer needs. </li>
-              <!-- Code Yellows, Code Reds, Performance/AI, -->
-        </ul>
+          <ul>
+              <li>Partnered with engineering, product, and software teams across the orgs to set technical vision, strategy, and roadmaps, to deliver reliability, performance, and resilience at scale.</li>
+              <li>Delivered multiple large-scale engineering projects.</li>
+                <!-- GDPR, Disk Shortage, Regionalisation, New products -->
+                <!-- Alignement on reliabile. Grow tech council. -->
+              <li>Acted as a critical resource across internal or external partner orgs, and are a recognized leader for reliability, scalability, performance, and resilience, with a deep understanding of key business and customer needs. </li>
+                <!-- Code Yellows, Code Reds, Performance/AI, -->
+          </ul>
+        </div>
       </div>
 
-      <div class=job>
-        <h3>Operations Tech Lead, <a href="https://cloud.google.com/sovereign-controls-by-partners/docs/overview">Trusted Partner Cloud</a></h3>
-        <div class=duration><a href="https://about.google/">Google</a> - August 2020 - August 2023</div>
-        <p>Sovereign Trusted Partner Cloud takes Google's internal software and hardware stack and allows 3rd parties to run and operate it. Responsible for deciding how all teams across Google will work with partners to operate the stack, in terms of Monitoring, Deployment, Incident Response, SLOs, etc.</p>
-        <ul>
-          <li>Identified and solved complex, multi-dimensional risks across teams, products, and orgs. Influence cross-org collaborations, ensuring strategy, direction, and decisions of multiple workstreams were aligned to achieve business goals.</li>
-            <!-- Everything operations. Monitoring, Deployment, Incident Management, SLOs, etc -->
-            <!-- Worked internal to adjust development processes, tech stack, etc, to make it work outside -->
-          <li>Worked with external partners, and internal stakeholders on requirements, implementation, etc</li>
-            <!-- Worked with leads across Google, literally 100s of folks -->
-        </ul>
+      <div class="print-fix">
+        <div class=job>
+          <h3>Operations Tech Lead, <a href="https://cloud.google.com/sovereign-controls-by-partners/docs/overview">Trusted Partner Cloud</a></h3>
+          <div class=duration><a href="https://about.google/">Google</a> - August 2020 - August 2023</div>
+          <p>Sovereign Trusted Partner Cloud takes Google's internal software and hardware stack and allows 3rd parties to run and operate it. Responsible for deciding how all teams across Google will work with partners to operate the stack, in terms of Monitoring, Deployment, Incident Response, SLOs, etc.</p>
+          <ul>
+            <li>Identified and solved complex, multi-dimensional risks across teams, products, and orgs. Influence cross-org collaborations, ensuring strategy, direction, and decisions of multiple workstreams were aligned to achieve business goals.</li>
+              <!-- Everything operations. Monitoring, Deployment, Incident Management, SLOs, etc -->
+              <!-- Worked internal to adjust development processes, tech stack, etc, to make it work outside -->
+            <li>Worked with external partners, and internal stakeholders on requirements, implementation, etc</li>
+              <!-- Worked with leads across Google, literally 100s of folks -->
+          </ul>
+        </div>
       </div>
 
-      <div class=job>
-        <img src="gcs.png" class=logo>
-        <h3>Manager, <a href="https://cloud.google.com/storage">Google Cloud Storage (GCS)</a> SRE</h3>
-        <div class=duration><a href="https://about.google/">Google</a> - August 2017 - August 2020</div>
-        Responsible for all GCS Object Storage SRE teams (~40 folks)
-        <ul>
-            <li>Managing both internal and external object storage use cases (xxx EiB of data under management, ~XX M qps).</li>
-            <li>Sustained growth of business 2x every ~18 months, in QPS, Bandwidth and Bytes stored.</li>
-            <li>Grow team, hired managers, and ICs, setup team structure, processes, training, etc.</li>
+
+      <div class="print-fix">
+        <div class=job>
+          <img src="gcs.png" class=logo>
+          <h3>Manager, <a href="https://cloud.google.com/storage">Google Cloud Storage (GCS)</a> SRE</h3>
+          <div class=duration><a href="https://about.google/">Google</a> - August 2017 - August 2020</div>
+          Responsible for all GCS Object Storage SRE teams (~40 folks)
+          <ul>
+              <li>Managing both internal and external object storage use cases (xxx EiB of data under management, ~XX M qps).</li>
+              <li>Sustained growth of business 2x every ~18 months, in QPS, Bandwidth and Bytes stored.</li>
+              <li>Grow team, hired managers, and ICs, setup team structure, processes, training, etc.</li>
+              <!--
+                <li>Lead GDPR effort across GCS</li>
+                <li>Lead regionalisation of a single global object storage stack into ~40 regional stacks.</li>
+              -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="print-fix">
+        <div class=job>
+          <img src="play.png" class=logo>
+          <h3>Manager, Android / Play SRE</h3>
+          <div class=duration><a href="https://about.google/">Google</a> - August 2014 - August 2017</div>
+
+          Responsible for all Android backend services, and Play Store. Managed two teams of SREs (approx ~16 folks), growing to three teams. At the time, Android was used on over a billion devices, and Play made >$1B/quarter in revenue. These were mission critical services.
+        </div>
+      </div>
+
+      <div class="print-fix">
+        <div class=job id=genesys>
+          <img src="genesys.png" class=logo>
+          <h3>Manager, Engineering</h3>
+          <div class=duration><a href="https://www.genesys.com/">Genesys</a> - July 2013 - August 2014</div>
+
+          Lead the product development efforts with respect to Mobile.
+
+          <ul>
+            <li>Creating new product lines to enable new functionality, e.g, iBeacon, Passbook, Geo-fencing, MMS messaging.</li>
+            <li>Applied best practices in mobile development and cloud operations, learnt at 2ergo/SoundBite to the rest of Genesys.</li>
+            <li>Maintain existing infrastructure, serving popular mobile websites, and sending millions of SMS messages a month across 20 countries.</li>
+
             <!--
-              <li>Lead GDPR effort across GCS</li>
-              <li>Lead regionalisation of a single global object storage stack into ~40 regional stacks.</li>
+              <li>Double the size of engineering team.</li>
+              <li>Launched SMS connectivity in 20+ new countries</li>
             -->
-        </ul>
-      </div>
-
-      <div class=job>
-        <img src="play.png" class=logo>
-        <h3>Manager, Android / Play SRE</h3>
-        <div class=duration><a href="https://about.google/">Google</a> - August 2014 - August 2017</div>
-
-        Responsible for all Android backend services, and Play Store. Managed two teams of SREs (approx ~16 folks), growing to three teams. At the time, Android was used on over a billion devices, and Play made >$1B/quarter in revenue. These were mission critical services.
-      </div>
-
-      <div class=job id=genesys>
-        <img src="genesys.png" class=logo>
-        <h3>Manager, Engineering</h3>
-        <div class=duration><a href="https://www.genesys.com/">Genesys</a> - July 2013 - August 2014</div>
-
-        Lead the product development efforts with respect to Mobile.
-
-        <ul>
-          <li>Creating new product lines to enable new functionality, e.g, iBeacon, Passbook, Geo-fencing, MMS messaging.</li>
-          <li>Applied best practices in mobile development and cloud operations, learnt at 2ergo/SoundBite to the rest of Genesys.</li>
-          <li>Maintain existing infrastructure, serving popular mobile websites, and sending millions of SMS messages a month across 20 countries.</li>
-
-          <!--
-            <li>Double the size of engineering team.</li>
-            <li>Launched SMS connectivity in 20+ new countries</li>
-          -->
-        </ul>
+          </ul>
+        </div>
       </div>
 
       <div class=transition>July 2013 Genesys acquired SoundBite.</div>
 
-      <div class=job>
-        <h3>Manager, Mobile Development</h3>
-        <div class=duration>SoundBite - March 2012 - July 2013</div>
+      <div class="print-fix">
+        <div class=job>
+          <h3>Manager, Mobile Development</h3>
+          <div class=duration>SoundBite - March 2012 - July 2013</div>
 
-        <p>Lead cross-functional team of developers, system administrators and QA testers, for the mobile marketing product lines.</p>
-        <!--
-        I continue to define
-      the technology and direction for the mobile marketing arm of SoundBite. This includes maintaining our high-volume
-      SMS messaging platforms, developing our multiple mobile products, and overseeing the development of custom work.\\
-        -->
+          <p>Lead cross-functional team of developers, system administrators and QA testers, for the mobile marketing product lines.</p>
+          <!--
+          I continue to define
+        the technology and direction for the mobile marketing arm of SoundBite. This includes maintaining our high-volume
+        SMS messaging platforms, developing our multiple mobile products, and overseeing the development of custom work.\\
+          -->
+        </div>
       </div>
 
       <div class=transition>March 2012 SoundBite acquired 2ergo Americas.</div>
 
-      <div class=job>
-        <h3>Head of Technology, Mobile Development</h3>
-        <div class=duration>2ergo Americas - October 2010 - March 2012</div>
+      <div class="print-fix">
+        <div class=job>
+          <h3>Head of Technology, Mobile Development</h3>
+          <div class=duration>2ergo Americas - October 2010 - March 2012</div>
 
-        <p>Responsible for all things technical at a ~15 person mobile marketing company. Developing products, running data center ops, working with clients, enabling sales, etc.</p>
+          <p>Responsible for all things technical at a ~15 person mobile marketing company. Developing products, running data center ops, working with clients, enabling sales, etc.</p>
 
-        <!--
-        <p>When I first joined 2ergo Americas, there was no technical leadership, I quickly became the ``go-to guy'' for solving problems. After many months of fixing our processes, and directing our technologies decisions, I eased into the role of Head of Technology.</p>
+          <!--
+          <p>When I first joined 2ergo Americas, there was no technical leadership, I quickly became the ``go-to guy'' for solving problems. After many months of fixing our processes, and directing our technologies decisions, I eased into the role of Head of Technology.</p>
 
-        <p>My duties included ensuring 2ergo Americans had a unified technical vision, managing our developers and sysadmin staff, and growing the business.</p>
+          <p>My duties included ensuring 2ergo Americans had a unified technical vision, managing our developers and sysadmin staff, and growing the business.</p>
 
-        <p>In the following 9 months, I planned and led the migration to a virtualised environment, designed a global messaging
-      infrastructure, and headed the technical integration with SoundBite when they acquired 2ergo Americas in March 2012.</p>
-        -->
+          <p>In the following 9 months, I planned and led the migration to a virtualised environment, designed a global messaging
+        infrastructure, and headed the technical integration with SoundBite when they acquired 2ergo Americas in March 2012.</p>
+          -->
+        </div>
       </div>
 
-      <div class=job id=lancaster>
-        <img src="lancaster.png" class=logo>
-        <h3>Research Associate</h3>
-        <div class=duration><a href="https://www.lancaster.ac.uk/">Lancaster University</a> - July 2007 - October 2010</div>
+      <div class="print-fix">
+        <div class=job id=lancaster>
+          <img src="lancaster.png" class=logo>
+          <h3>Research Associate</h3>
+          <div class=duration><a href="https://www.lancaster.ac.uk/">Lancaster University</a> - July 2007 - October 2010</div>
 
-        <p>
-          Post doctoral research into large scale distributed systems, peer-to-peer, content distribution networks (CDNs), and low level optimisations of the Linux network stack. 
-        </p>
+          <p>
+            Post doctoral research into large scale distributed systems, peer-to-peer, content distribution networks (CDNs), and low level optimisations of the Linux network stack. 
+          </p>
+        </div>
       </div>
 
+      <div class="print-fix">
+        <div class="job">
 
-      <h2>Publications</h2>
-        <p>
-        <ul>
-          <li><a href="https://github.com/bramp/publication/blob/master/ivod/NOSSDAV07/p-brampton.pdf">Characterising and Exploiting Workloads of Highly Interactive Video-on-Demand</a> - NOSSDAV 2007,</li>
-          <li><a href="https://github.com/bramp/publication/blob/master/stealth-dht/CoNEXT-2006/conext.pdf">Stealth Distributed Hash Table: A Robust and flexible super-peered DHT</a> - ACM CoNEXT 2006,</li>
-          <li><a href="https://github.com/bramp/publication/blob/master/multi-core-networking/AINA-09/aina-09.pdf">Evaluating the Performance of Network Protocol Processing on Multi-core Systems</a> - AINA 2009,</li>
-          <li>and <a href="https://scholar.google.com/citations?user=L-GFbsYAAAAJ">many more</a>.</li>
-        </ul>
-      </p>
+          <h2>Publications</h2>
 
-      <h2>Education</h2>
-
-      <div class="job" id="phd">
-        <h3>Ph.D. in Computer Science</h3>
-        <div class=duration><a href="https://www.lancaster.ac.uk/">Lancaster University</a> - 2004 - 2008</div>
-
-        <table>
-          <tr><td class=title>Thesis:</td><td><a href="https://github.com/bramp/phd-thesis/blob/master/thesis.pdf">The Impact of Highly Interactive Workloads on Video-on-Demand Systems</a></td></tr>
-          <tr><td class=title>Supervisor:</td><td>Prof. Laurent Mathy</td></tr>
-          <tr><td class=title>Topics:</td><td><a href="https://www.google.com/search?q=define%3Acdn">Content Distribution Networks</a>, <a href=https://www.google.com/search?q=define%3Apeer+to+peer>Peer-to-Peer, <a href="https://www.google.com/search?q=define%3A%22Self-Organising+Systems">Autonomic Self-Organising Systems</a></td></tr>
-        </table>
+          <p>
+            <ul>
+              <li><a href="https://github.com/bramp/publication/blob/master/ivod/NOSSDAV07/p-brampton.pdf">Characterising and Exploiting Workloads of Highly Interactive Video-on-Demand</a> - NOSSDAV 2007,</li>
+              <li><a href="https://github.com/bramp/publication/blob/master/stealth-dht/CoNEXT-2006/conext.pdf">Stealth Distributed Hash Table: A Robust and flexible super-peered DHT</a> - ACM CoNEXT 2006,</li>
+              <li><a href="https://github.com/bramp/publication/blob/master/multi-core-networking/AINA-09/aina-09.pdf">Evaluating the Performance of Network Protocol Processing on Multi-core Systems</a> - AINA 2009,</li>
+              <li>and <a href="https://scholar.google.com/citations?user=L-GFbsYAAAAJ">many more</a>.</li>
+            </ul>
+          </p>
+        </div>
       </div>
 
-      <div class="job" id="bsc">
-        <h3>B.Sc. <i>(1st w/ honours)</i> in Computer Science</h3>
-        <div class=duration><a href="https://www.lancaster.ac.uk/">Lancaster University</a> - 2001 - 2004</div>
-        <table>
-          <tr><td class=title>Dissertation</td><td>Peer-to-Peer Media Streaming</td></tr>
-        </table>
+      <div class="print-fix">
+        <div class="job" id="phd">
 
-        <h2></h2>
+          <h2>Education</h2>
 
-        <table>
-          <tr><td class=title>Languages:</td><td>C++, Java, Go, Rust, Python, JavaScript, etc.</td></tr>
-          <tr><td class=title>Interests:</td><td>Open Source, Security, 3D Printing & Design, Rock Music.</td></tr>
-        </table>
+          <h3>Ph.D. in Computer Science</h3>
+          <div class=duration><a href="https://www.lancaster.ac.uk/">Lancaster University</a> - 2004 - 2008</div>
+
+          <table>
+            <tr><td class=title>Thesis:</td><td><a href="https://github.com/bramp/phd-thesis/blob/master/thesis.pdf">The Impact of Highly Interactive Workloads on Video-on-Demand Systems</a></td></tr>
+            <tr><td class=title>Supervisor:</td><td>Prof. Laurent Mathy</td></tr>
+            <tr><td class=title>Topics:</td><td><a href="https://www.google.com/search?q=define%3Acdn">Content Distribution Networks</a>, <a href=https://www.google.com/search?q=define%3Apeer+to+peer>Peer-to-Peer, <a href="https://www.google.com/search?q=define%3A%22Self-Organising+Systems">Autonomic Self-Organising Systems</a></td></tr>
+          </table>
+        </div>
       </div>
+
+      <div class="print-fix">
+        <div class="job" id="bsc">
+          <h3>B.Sc. <i>(1st w/ honours)</i> in Computer Science</h3>
+          <div class=duration><a href="https://www.lancaster.ac.uk/">Lancaster University</a> - 2001 - 2004</div>
+          <table>
+            <tr><td class=title>Dissertation</td><td>Peer-to-Peer Media Streaming</td></tr>
+          </table>
+
+          <h2></h2>
+
+          <table>
+            <tr><td class=title>Languages:</td><td>C++, Java, Go, Rust, Python, JavaScript, etc.</td></tr>
+            <tr><td class=title>Interests:</td><td>Open Source, Security, 3D Printing & Design, Rock Music.</td></tr>
+          </table>
+        </div>
+    </div>
 
     </div>
 
