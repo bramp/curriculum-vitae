@@ -22,6 +22,10 @@
     @page {
       size: letter;
       margin: 0;
+
+      @bottom-left {
+        content: counter(page) ' of ' counter(pages);
+      }
     }
 
     body {
@@ -66,6 +70,7 @@
       }
     }
 
+
     #container {
       display: grid;
       grid-template-columns: 30% 1fr;
@@ -78,7 +83,21 @@
 
     .top-logo {
       grid-area: 1 / 1 / 2 / 2;
+    }
+    .top-title {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .body-side {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+    .body-main {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+    .bottom {
+      grid-area: 3 / 1 / 4 / 3;
+    }
 
+    .top-logo {
       text-align: center;
       background: #36383e;
     }
@@ -94,8 +113,6 @@
     }
 
     .top-title {
-      grid-area: 1 / 2 / 2 / 3;
-
       background: #36383e;
       color: white;
     }
@@ -111,8 +128,6 @@
     }
 
     .body-side {
-      grid-area: 2 / 1 / 3 / 2;
-
       background: #eee7e1;
       padding: 20px;
       padding-top: 40px;
@@ -132,8 +147,6 @@
     }
 
     .body-main {
-      grid-area: 2 / 2 / 3 / 3;
-
       padding: 20px;
       padding-top: 40px;
 
@@ -147,8 +160,6 @@
       text-align: center;
 
       color: white;
-
-      grid-area: 3 / 1 / 4 / 3;
     }
 
 
@@ -246,6 +257,71 @@
       text-decoration: underline;
     }
 
+    ul.timeline {
+      list-style: none;
+      margin: 0;
+      margin-left: 1.5em;
+    }
+
+    ul.timeline li {
+      position: relative;
+      padding: 0;
+      margin: 0.5em;
+    }
+
+    ul.timeline li:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #36383e;
+      position: absolute;
+      left: -20px;
+      top: 1em;
+    }
+
+    ul.timeline > li:not(:last-child):after {
+      content: '';
+      width: 2px;
+      height: 100%;
+      background: #36383e;
+      position: absolute;
+      left: -16px;
+      top: 33%;
+    }
+
+    @media only screen and (max-width: 720px) {
+      #container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+      }
+
+      .top-logo {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      .top-title {
+        grid-area: 2 / 1 / 3 / 2;
+        text-align: center;
+      }
+      .body-side {
+        grid-area: 3 / 1 / 4 / 2;
+      }
+      .body-main {
+        grid-area: 4 / 1 / 5 / 2;
+      }
+      .bottom {
+        grid-area: 5 / 1 / 6 / 2;
+      }
+      .body-main {
+        padding-top: 0;
+      }
+
+      .timelines {
+        display: none;
+      }
+    }
+
   </style>
   <script src="https://kit.fontawesome.com/56627b521b.js" crossorigin="anonymous"></script>
 </head>
@@ -274,8 +350,49 @@
 
       </ul>
 
-      <h2>Work</h2>
-      <h2>Education</h2>
+      <div class=timelines>
+        <h2>Work</h2>
+
+        <ul class=timeline>
+          <li>
+            <a href="#geocrew">2023 - Present</a><br/>
+            Founder<br/>
+            Geocrew<br/>
+          </li>
+          <li>
+            <a href="#google">2014 - 2023</a><br/>
+            Manager / Tech Lead<br/>
+            Google
+          </li>
+          <li>
+            <a href="#genesys">2010 - 2014</a><br/>
+            Manager<br/>
+            Genesys<br/>
+          </li>
+
+          <li>
+            <a href="#lancaster">2007 - 2010</a><br/>
+            Research Associate<br/>
+            Lancaser University<br/>
+          </li>
+        </ul>
+        <h2>Education</h2>
+
+        <ul class=timeline>
+          <li>
+            <a href="#phd">2004 - 2008</a><br/>
+            Ph.D. Computer Science<br/>
+            Lancaster University<br/>
+
+          </li>
+          <li>
+            <a href="#bsc">2001 - 2004</a><br/>
+            B.Sc. Computer Science<br/>
+            Lancaster University<br/>
+            </li>
+        </ul>
+      </div>
+
 
     </div>
 
@@ -305,7 +422,7 @@ move in the opposite direction.<br/> - E.F. Schumacher</p>
       % and how ever week I had to self-learn new skills, ranging from development, to management, to account management, to sales.
       -->
 
-      <div class=job>
+      <div class=job id=geocrew>
         <h3>Founder @ Geocrew</h3>
         <div class=duration>August 2023 - Present</div>
 
@@ -320,7 +437,7 @@ move in the opposite direction.<br/> - E.F. Schumacher</p>
 
       </div>
 
-      <div class=job>
+      <div class=job id=google>
         <img src="gcp.png" class=logo>
         <h3>Uber Tech Lead, Storage SRE </h3>
         <div class=duration><a href="https://about.google/">Google</a> - August 2020 - August 2023</div>
@@ -373,7 +490,7 @@ move in the opposite direction.<br/> - E.F. Schumacher</p>
         Responsible for all Android backend services, and Play Store. Managed two teams of SREs (approx ~16 folks), growing to three teams. At the time, Android was used on over a billion devices, and Play made >$1B/quarter in revenue. These were mission critical services.
       </div>
 
-      <div class=job>
+      <div class=job id=genesys>
         <img src="genesys.png" class=logo>
         <h3>Manager, Engineering</h3>
         <div class=duration><a href="https://www.genesys.com/">Genesys</a> - July 2013 - August 2014</div>
@@ -424,7 +541,7 @@ move in the opposite direction.<br/> - E.F. Schumacher</p>
         -->
       </div>
 
-      <div class=job>
+      <div class=job id=lancaster>
         <img src="lancaster.png" class=logo>
         <h3>Research Associate</h3>
         <div class=duration><a href="https://www.lancaster.ac.uk/">Lancaster University</a> - July 2007 - October 2010</div>
@@ -447,27 +564,31 @@ move in the opposite direction.<br/> - E.F. Schumacher</p>
 
       <h2>Education</h2>
 
-      <h3>Ph.D. in Computer Science</h3>
-      <div class=duration><a href="https://www.lancaster.ac.uk/">Lancaster University</a> - 2004 - 2008</div>
+      <div class="job" id="phd">
+        <h3>Ph.D. in Computer Science</h3>
+        <div class=duration><a href="https://www.lancaster.ac.uk/">Lancaster University</a> - 2004 - 2008</div>
 
-      <table>
-        <tr><td class=title>Thesis:</td><td><a href="https://github.com/bramp/phd-thesis/blob/master/thesis.pdf">The Impact of Highly Interactive Workloads on Video-on-Demand Systems</a></td></tr>
-        <tr><td class=title>Supervisor:</td><td>Prof. Laurent Mathy</td></tr>
-        <tr><td class=title>Topics:</td><td><a href="https://www.google.com/search?q=define%3Acdn">Content Distribution Networks</a>, <a href=https://www.google.com/search?q=define%3Apeer+to+peer>Peer-to-Peer, <a href="https://www.google.com/search?q=define%3A%22Self-Organising+Systems">Autonomic Self-Organising Systems</a></td></tr>
-      </table>
+        <table>
+          <tr><td class=title>Thesis:</td><td><a href="https://github.com/bramp/phd-thesis/blob/master/thesis.pdf">The Impact of Highly Interactive Workloads on Video-on-Demand Systems</a></td></tr>
+          <tr><td class=title>Supervisor:</td><td>Prof. Laurent Mathy</td></tr>
+          <tr><td class=title>Topics:</td><td><a href="https://www.google.com/search?q=define%3Acdn">Content Distribution Networks</a>, <a href=https://www.google.com/search?q=define%3Apeer+to+peer>Peer-to-Peer, <a href="https://www.google.com/search?q=define%3A%22Self-Organising+Systems">Autonomic Self-Organising Systems</a></td></tr>
+        </table>
+      </div>
 
-      <h3>B.Sc. <i>(1st w/ honours)</i> in Computer Science</h3>
-      <div class=duration><a href="https://www.lancaster.ac.uk/">Lancaster University</a> - 2001 - 2004</div>
-      <table>
-        <tr><td class=title>Dissertation</td><td>Peer-to-Peer Media Streaming</td></tr>
-      </table>
+      <div class="job" id="bsc">
+        <h3>B.Sc. <i>(1st w/ honours)</i> in Computer Science</h3>
+        <div class=duration><a href="https://www.lancaster.ac.uk/">Lancaster University</a> - 2001 - 2004</div>
+        <table>
+          <tr><td class=title>Dissertation</td><td>Peer-to-Peer Media Streaming</td></tr>
+        </table>
 
-      <h2></h2>
+        <h2></h2>
 
-      <table>
-        <tr><td class=title>Languages:</td><td>C++, Java, Go, Rust, Python, JavaScript, etc.</td></tr>
-        <tr><td class=title>Interests:</td><td>Open Source, Security, 3D Printing & Design, Rock Music.</td></tr>
-      </table>
+        <table>
+          <tr><td class=title>Languages:</td><td>C++, Java, Go, Rust, Python, JavaScript, etc.</td></tr>
+          <tr><td class=title>Interests:</td><td>Open Source, Security, 3D Printing & Design, Rock Music.</td></tr>
+        </table>
+      </div>
 
     </div>
 
